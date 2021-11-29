@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- footer固定在最底部
+https://stackoverflow.com/questions/10099422/flushing-footer-to-bottom-of-the-page-twitter-bootstrapㄈ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* border: 2px solid black; */
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            height: 100%;
+        }
+        
+        #wrap {
+            min-height: 100%;
+        }
+        
+        #main {
+            /* 有需要卷軸自動出現 */
+            overflow: auto;
+            padding-bottom: 150px;
+            /* this needs to be bigger than footer height*/
+        }
+        
+        .footer {
+            /* position: relative; */
+            /* 負值往上長 */
+            margin-top: -150px;
+            height: 150px;
+            /* clear: both; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="main" class="container clear-top">
+            <p>Your content here</p>
+        </div>
+    </div>
+    <footer class="footer">this is footer</footer>
+</body>
+
+</html>
