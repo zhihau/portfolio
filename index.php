@@ -9,53 +9,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
-  <style>
-    * {
-      /* border: 2px solid black; */
-      margin: 0;
-      padding: 0;
-    }
-
-    html,
-    body {
-      height: 100%;
-    }
-
-    .navbar{
-      background-color: #2E4C6D;
-    }
-
-    
-
-    .wrap {
-      min-height: 100%;
-      background-color: #396EB0;
-    }
-
-    .main {
-      /* 有需要卷軸自動出現 */
-      /* overflow: auto; */
-      padding-bottom: 150px;
-      /* this needs to be bigger than footer height*/
-    }
-
-    .footer {
-      /* position: relative; */
-      /* 負值往上長 */
-      margin-top: -150px;
-      height: 150px;
-      background-color: #FC997C;
-      /* clear: both; */
-    }
-
-    .br{
-      border-right: 1rem solid #396EB0 !important;
-    }
-
-    .div-bg-color{
-      background-color: #DADDFC;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/style.css">
+  
 </head>
 
 <body>
@@ -115,8 +70,9 @@
           //   print_r($homeworkDir);
           ?>
           <?php foreach ($homeworkDir as $desc => $dir) : ?>
-            <div class="col-4 p-2 br div-bg-color" style="cursor: pointer;" onclick="window.location.href='<?= $dir . 'index.php' ?>'">
+            <div class="col-4 p-2 card-border div-bg-color mb-3 card" onclick="window.location.href='<?= $dir . 'index.php' ?>'">
               <img class="img-fluid" title="<?= $desc ?>" src="<?= $dir . 'screenshot.png' ?>" alt="">
+              <h5><?= $desc ?></h5>
             </div>
           <?php endforeach ?>
           <!--
