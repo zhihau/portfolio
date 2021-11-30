@@ -21,13 +21,20 @@
       height: 100%;
     }
 
+    .navbar{
+      background-color: #2E4C6D;
+    }
+
+    
+
     .wrap {
       min-height: 100%;
+      background-color: #396EB0;
     }
 
     .main {
       /* 有需要卷軸自動出現 */
-      overflow: auto;
+      /* overflow: auto; */
       padding-bottom: 150px;
       /* this needs to be bigger than footer height*/
     }
@@ -37,7 +44,16 @@
       /* 負值往上長 */
       margin-top: -150px;
       height: 150px;
+      background-color: #FC997C;
       /* clear: both; */
+    }
+
+    .br{
+      border-right: 1rem solid #396EB0 !important;
+    }
+
+    .div-bg-color{
+      background-color: #DADDFC;
     }
   </style>
 </head>
@@ -94,12 +110,12 @@
         </ul>
       </nav>
       <div class="container mt-3">
-        <div class="d-flex flex-wrap bg-light row" id="homework">
+        <div class="d-flex flex-wrap row" id="homework">
           <?php
           //   print_r($homeworkDir);
           ?>
           <?php foreach ($homeworkDir as $desc => $dir) : ?>
-            <div class="col-4 p-2 border" style="cursor: pointer;" onclick="window.location.href='<?= $dir . 'index.php' ?>'">
+            <div class="col-4 p-2 br div-bg-color" style="cursor: pointer;" onclick="window.location.href='<?= $dir . 'index.php' ?>'">
               <img class="img-fluid" title="<?= $desc ?>" src="<?= $dir . 'screenshot.png' ?>" alt="">
             </div>
           <?php endforeach ?>
