@@ -72,7 +72,7 @@
           <?php foreach ($homeworkDir as $desc => $dir) : ?>
             <div class="col-4 p-2 card-border div-bg-color mb-3 card" onclick="window.location.href='<?= $dir . 'index.php' ?>'">
               <img class="img-fluid" title="<?= $desc ?>" src="<?= $dir . 'screenshot.png' ?>" alt="">
-              <h5><?= $desc ?></h5>
+              <!-- <p><?= $desc ?></p> -->
             </div>
           <?php endforeach ?>
           <!--

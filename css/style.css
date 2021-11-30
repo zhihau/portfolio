@@ -55,9 +55,11 @@ body {
     cursor: pointer;
 }
 
-.card>h5 {
+.card>p {
     align-self: center;
     flex-grow: 1;
+    font-size: larger;
+    font-weight: 500;
 }
 
 .card>img {
