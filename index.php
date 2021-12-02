@@ -70,9 +70,11 @@
           //   print_r($homeworkDir);
           ?>
           <?php foreach ($homeworkDir as $desc => $dir) : ?>
-            <div class="col-4 p-2 card-border div-bg-color mb-3 card" onclick="window.location.href='<?= $dir . 'index.php' ?>'">
-              <img class="img-fluid" title="<?= $desc ?>" src="<?= $dir . 'screenshot.png' ?>" alt="">
-              <!-- <p><?= $desc ?></p> -->
+            <div class="col-md-4 col-sm-6 p-2 card-border div-bg-color mb-3 card" onclick="window.location.href='<?= $dir . 'index.php' ?>'">
+            
+            <img class="img-fluid" title="<?= $desc ?>" src="<?= $dir . 'screenshot.png' ?>" alt="">
+              <p><?= $desc ?></p>
+           
             </div>
           <?php endforeach ?>
           <!--

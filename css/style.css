@@ -53,6 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 .card>p {
@@ -60,6 +61,8 @@ body {
     flex-grow: 1;
     font-size: larger;
     font-weight: 500;
+    word-break: break-all;
+    white-space: normal;
 }
 
 .card>img {
